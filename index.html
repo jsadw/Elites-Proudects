@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ELITES Products · Get your key</title>
+<meta name="description" content="Get a free ELITES Products key in a few quick steps and load the script.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --pine:#0f3b2a; --pine-2:#16503a; --crimson:#c8102e; --gold:#e8b04a;
+  --snow:#f4f7f3; --card:#ffffff; --ink:#14221b; --muted:#5b6b62; --line:#d9e2db;
+  --code-bg:#0c1f17; --code-ink:#d7f2e1;
+}
+@media (prefers-color-scheme:dark){
+  :root{--snow:#0b1612; --card:#12241c; --ink:#eef5f0; --muted:#9db0a5; --line:#24392f; --code-bg:#07130d;}
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--snow);color:var(--ink);font-family:"Bricolage Grotesque",system-ui,sans-serif;line-height:1.55;min-height:100vh}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+.wrap{max-width:880px;margin:0 auto;padding:0 20px}
+
+/* lights strip: the one decorative moment */
+.lights{height:34px;background:
+  radial-gradient(circle at 12px 18px,var(--crimson) 0 5px,transparent 6px) 0 0/48px 34px repeat-x,
+  radial-gradient(circle at 36px 18px,var(--gold) 0 5px,transparent 6px) 0 0/48px 34px repeat-x,
+  linear-gradient(var(--pine),var(--pine));
+  border-bottom:3px solid var(--crimson)}
+@media (prefers-reduced-motion:no-preference){.lights{animation:glow 3s ease-in-out infinite alternate}}
+@keyframes glow{from{filter:brightness(.85)}to{filter:brightness(1.15)}}
+
+header.hero{padding:56px 0 36px}
+.brand{display:inline-block;background:var(--crimson);color:#fff;font-weight:800;padding:6px 16px;transform:skew(-8deg);box-shadow:5px 5px 0 var(--pine);letter-spacing:.02em}
+.brand span{display:inline-block;transform:skew(8deg)}
+h1{font-size:clamp(2.4rem,7vw,4.4rem);line-height:1.02;margin:22px 0 14px;font-weight:800;letter-spacing:-.02em;max-width:14ch}
+.lead{font-size:1.15rem;color:var(--muted);max-width:52ch;margin:0 0 26px}
+.cta-row{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.btn{font:inherit;font-weight:600;border:0;cursor:pointer;padding:14px 26px;background:var(--crimson);color:#fff;text-decoration:none;display:inline-flex;gap:8px;align-items:center;box-shadow:5px 5px 0 var(--pine);transition:transform .12s,box-shadow .12s}
+.btn:hover{transform:translate(2px,2px);box-shadow:3px 3px 0 var(--pine)}
+.btn:active{transform:translate(5px,5px);box-shadow:0 0 0 var(--pine)}
+.btn.ghost{background:transparent;color:var(--ink);border:2px solid var(--ink);box-shadow:none}
+.btn.small{padding:9px 16px;font-size:.9rem;box-shadow:3px 3px 0 var(--pine)}
+.stats{display:flex;gap:22px;flex-wrap:wrap;margin-top:22px;color:var(--muted);font-size:.95rem}
+
+/* returning from checkpoint */
+.banner{display:none;margin:0 0 24px;padding:16px 20px;border-left:6px solid var(--pine-2);background:var(--card);border-radius:0 8px 8px 0}
+.banner.show{display:block}
+.banner strong{display:block;font-size:1.05rem}
+
+section{padding:34px 0}
+h2{font-size:1.9rem;margin:0 0 6px;letter-spacing:-.01em}
+.sub{color:var(--muted);margin:0 0 24px}
+
+ol.steps{list-style:none;margin:0;padding:0;counter-reset:s;border-left:3px solid var(--line);margin-left:18px}
+ol.steps li{counter-increment:s;position:relative;padding:0 0 26px 34px}
+ol.steps li::before{content:counter(s);position:absolute;left:-19px;top:0;width:35px;height:35px;border-radius:50%;background:var(--pine);color:#fff;font-weight:800;display:grid;place-items:center;border:3px solid var(--snow)}
+ol.steps li:last-child{padding-bottom:0}
+ol.steps h3{margin:0 0 4px;font-size:1.15rem}
+ol.steps p{margin:0;color:var(--muted)}
+ol.steps li.done::before{background:var(--crimson);content:"\2713"}
+
+.panel{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px}
+label{font-weight:600;display:block;margin-bottom:8px}
+input[type=text]{width:100%;font:500 1rem "IBM Plex Mono",monospace;padding:13px 14px;border:2px solid var(--line);border-radius:8px;background:var(--snow);color:var(--ink)}
+input[type=text]:focus{border-color:var(--pine-2);outline:none;box-shadow:0 0 0 3px rgba(232,176,74,.5)}
+.hint{font-size:.9rem;color:var(--muted);margin:8px 0 18px}
+
+.codebar{display:flex;justify-content:space-between;align-items:center;background:#06100b;color:#8fb3a0;padding:10px 14px;border-radius:10px 10px 0 0;font:500 .85rem "IBM Plex Mono",monospace}
+pre{margin:0;background:var(--code-bg);color:var(--code-ink);padding:18px;border-radius:0 0 10px 10px;overflow-x:auto;font:400 .88rem/1.6 "IBM Plex Mono",monospace;tab-size:4}
+.c{color:#6f9a84}.k{color:#f2b8c0}.s{color:#f4d58d}
+
+details{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:14px 18px;margin-bottom:10px}
+summary{font-weight:600;cursor:pointer}
+details p{color:var(--muted);margin:10px 0 0}
+
+footer{border-top:1px solid var(--line);padding:28px 0 60px;color:var(--muted);font-size:.92rem;display:flex;flex-wrap:wrap;gap:14px;justify-content:space-between}
+.toast{position:fixed;bottom:22px;left:50%;transform:translate(-50%,90px);background:var(--pine);color:#fff;padding:12px 20px;border-radius:8px;font-weight:600;transition:transform .25s;z-index:9}
+.toast.show{transform:translate(-50%,0)}
+@media (max-width:520px){.btn{width:100%;justify-content:center}}
+</style>
+</head>
+<body>
+<div class="lights" aria-hidden="true"></div>
+
+<header class="hero">
+  <div class="wrap">
+    <span class="brand"><span>ELITES Products</span></span>
+    <h1>Get your key in two checkpoints.</h1>
+    <p class="lead">Free access. Complete the quick checkpoints, copy your key, and paste it into the script below. Most people finish in under two minutes.</p>
+    <div class="cta-row">
+      <a class="btn" id="getKey" href="#" rel="noopener">Get my key</a>
+      <a class="btn ghost" href="#script">I already have a key</a>
+    </div>
+    <div class="stats"><span>2 checkpoints</span><span>Key lasts 7 days</span><span>Lost it? Reset your HWID on the key page</span></div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <div class="banner" id="banner" role="status">
+    <strong>Checkpoint received.</strong>
+    Head back to the key page to finish the remaining steps and reveal your key.
+  </div>
+
+  <section id="steps">
+    <h2>How to get a key</h2>
+    <p class="sub">Do these in order. Your key only appears after the last checkpoint.</p>
+    <ol class="steps">
+      <li><h3>Open the key page</h3><p>Press <strong>Get my key</strong>. It opens our Panda key system in a new tab.</p></li>
+      <li><h3>Finish checkpoint 1</h3><p>Press <em>Continue to Next Step</em>, then wait for the checkpoint to load and complete it.</p></li>
+      <li><h3>Finish checkpoint 2</h3><p>Same again. Do not skip ahead or use a bypasser, the system detects it and rejects the key.</p></li>
+      <li><h3>Pass the human check</h3><p>Tick the hCaptcha box (<em>I am human</em>), wait for <em>Verification complete</em>, then press <strong>Continue</strong>.</p></li>
+      <li><h3>Copy your key</h3><p>Copy the key shown on the final screen and paste it in the box below.</p></li>
+      <li><h3>Run the script</h3><p>Your key is filled into the script automatically. Copy it and execute it in your executor.</p></li>
+    </ol>
+  </section>
+
+  <section id="script">
+    <h2>Your script</h2>
+    <p class="sub">Paste your key and the script updates itself. Keep it at the very top of your file.</p>
+    <div class="panel">
+      <label for="keyInput">Your key</label>
+      <input type="text" id="keyInput" placeholder="Paste your key here" autocomplete="off" spellcheck="false">
+      <p class="hint">Saved only in this browser so you do not have to paste it again.</p>
+
+      <div class="codebar"><span>Panda Auth · PUSL-V4</span><button class="btn small" id="copyBtn" type="button">Copy script</button></div>
+      <pre id="code"></pre>
+    </div>
+  </section>
+
+  <section id="faq">
+    <h2>Problems?</h2>
+    <p class="sub">Quick fixes for the usual issues.</p>
+    <details><summary>The checkpoint page says "This site can't be reached"</summary><p>Reload the key page and start again. If it keeps happening, the checkpoint link is misconfigured: tell us in Discord so we can fix it.</p></details>
+    <details><summary>My key says invalid</summary><p>Copy the key again with no spaces before or after. Keys expire after 7 days, and each key is tied to one device (HWID).</p></details>
+    <details><summary>I changed PC or reinstalled</summary><p>Open the key page and use <em>Already have a key? Reset HWID</em>.</p></details>
+    <details><summary>"Library failed to initialize"</summary><p>Your executor blocked the request. Try again, check your internet, or switch executors.</p></details>
+    <p><a class="btn ghost" id="discord" href="#" rel="noopener">Join our Discord</a></p>
+  </section>
+</main>
+
+<div class="wrap"><footer>
+  <span>&copy; <span id="yr"></span> ELITES Products</span>
+  <span>Key system powered by Panda Auth</span>
+</footer></div>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script>
+/* ====== LINKS ====== */
+var KEY_LINK    = "https://ads.pandauth.com/getkey/elitesproducts";   // Panda key page
+var DISCORD_URL = "https://discord.gg/kGmpfTbmr";                  // Discord invite
+/* ================================== */
+
+var SERVICE_ID = "elitesproducts";
+var $ = function(id){return document.getElementById(id)};
+
+$("getKey").href = KEY_LINK; $("getKey").target = "_blank";
+$("discord").href = DISCORD_URL; $("discord").target = "_blank";
+$("yr").textContent = new Date().getFullYear();
+
+/* shown when LootLabs sends people back here with ?data=... */
+if (new URLSearchParams(location.search).has("data")) { $("banner").classList.add("show"); }
+
+function toast(msg){
+  var t = $("toast"); t.textContent = msg; t.classList.add("show");
+  clearTimeout(toast._t); toast._t = setTimeout(function(){t.classList.remove("show")}, 1800);
+}
+function esc(s){return s.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;")}
+function lua(s){return s.replace(/\\/g,"\\\\").replace(/"/g,'\\"').replace(/[\r\n]/g,"")}
+
+function buildScript(key){
+  return [
+    '-- Panda Auth - PUSL-V4',
+    '-- Paste this at the very top of your script.',
+    '',
+    'local PUSL = loadstring(game:HttpGet("https://secure.pandauth.com/pv4/lib"))()',
+    'if not PUSL or type(PUSL.configure) ~= "function" then',
+    '    return warn("[Panda] Library failed to initialize.")',
+    'end',
+    '',
+    'PUSL.configure({',
+    '    serviceId = "' + SERVICE_ID + '",',
+    '})',
+    '',
+    'local key = "' + lua(key || "USER_KEY_HERE") + '" -- your key',
+    'local result = PUSL.validate(key)',
+    '',
+    'if not result.success then',
+    '    warn("[Panda] Get a key: " .. PUSL.getKeyUrl())',
+    '    return',
+    'end',
+    '',
+    'print("[Panda] Authenticated. Premium:", result.isPremium)',
+    '',
+    '-- Your protected code goes below this line.'
+  ].join("\n");
+}
+
+function render(){
+  var key = $("keyInput").value.trim();
+  $("code").innerHTML = esc(buildScript(key)).replace(
+    /(--[^\n]*)|("(?:[^"\\\n]|\\.)*")|\b(local|if|then|end|return|not|and|function)\b/g,
+    function(m,c,str,kw){
+      return '<span class="'+(c?'c':str?'s':'k')+'">'+m+'</span>';
+    });
+  try{ localStorage.setItem("elites_key", key); }catch(e){}
+}
+
+try{ $("keyInput").value = localStorage.getItem("elites_key") || ""; }catch(e){}
+$("keyInput").addEventListener("input", render);
+render();
+
+$("copyBtn").addEventListener("click", function(){
+  var text = buildScript($("keyInput").value.trim());
+  if (navigator.clipboard && navigator.clipboard.writeText){
+    navigator.clipboard.writeText(text).then(function(){toast("Script copied")}, fallback);
+  } else fallback();
+  function fallback(){
+    var r = document.createRange(); r.selectNodeContents($("code"));
+    var s = getSelection(); s.removeAllRanges(); s.addRange(r);
+    toast("Press Ctrl+C to copy");
+  }
+});
+</script>
+</body>
+</html>
