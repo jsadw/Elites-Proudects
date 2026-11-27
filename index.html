@@ -141,6 +141,29 @@ dialog p{color:var(--mut);font-size:.93rem;margin-bottom:12px}
  section{padding:60px 0}
 }
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}.bar i{width:100%}}
+
+/* pricing + payments (added) */
+.plist{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:18px}
+.price{background:linear-gradient(180deg,var(--card),#0b0508);border:1px solid var(--line);border-radius:20px;padding:28px;transition:border-color .25s,box-shadow .25s}
+.price:hover{border-color:var(--red);box-shadow:0 16px 50px #ff2d4d25}
+.price h4{font:700 1.05rem var(--h);margin-bottom:6px}
+.price .rng{font:900 1.7rem var(--h);color:var(--red);margin:6px 0 2px}
+.price .sub{color:var(--mut);font-size:.85rem;margin-bottom:14px}
+.price .rec{display:inline-block;font:11px var(--m);letter-spacing:.1em;color:#7dffb0;background:#0d2a18;border-radius:999px;padding:4px 10px;margin-bottom:8px}
+.price table{width:100%;border-collapse:collapse;font-size:.92rem}
+.price td{padding:10px 0;border-top:1px solid var(--line);color:var(--mut)}
+.price td:last-child{text-align:right;color:var(--tx);font-weight:700;white-space:nowrap}
+.price .btn{margin-top:18px;width:100%}
+.pay{margin-top:30px;background:linear-gradient(135deg,#2a0810,#0b0508);border:1px solid #4a1624;border-radius:22px;padding:26px 28px}
+.pay h4{font:700 .95rem var(--h);letter-spacing:.08em;margin-bottom:16px}
+.pm{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.pm span,.pm a{display:inline-flex;align-items:center;gap:10px;background:#0b0508;border:1px solid var(--line);border-radius:999px;padding:9px 18px 9px 12px;font-weight:700;font-size:.92rem}
+.pm img{width:26px;height:26px;object-fit:contain}
+.pm a{color:var(--red);border-color:#5a1522;padding-left:18px}
+.pm a:hover{background:var(--red);color:#fff}
+.pol{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-top:26px}
+.pol div{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px 20px;font-size:.9rem;color:var(--mut)}
+.pol b{display:block;color:var(--tx);margin-bottom:4px}
 </style>
 </head>
 <body>
@@ -154,7 +177,7 @@ dialog p{color:var(--mut);font-size:.93rem;margin-bottom:12px}
  <a href="#home" class="logo"><img data-logo alt="">ELITES</a>
  <button id="menu" aria-label="Toggle menu" aria-expanded="false">☰</button>
  <div class="links" id="links">
-  <a href="#services">Services</a><a href="#free">Free</a><a href="#how">How it works</a><a href="#order">Order</a><a href="#founder">Founder</a><a href="#faq">FAQ</a>
+  <a href="#services">Services</a><a href="#free">Free</a><a href="#pricing">Pricing</a><a href="#how">How it works</a><a href="#order">Order</a><a href="#founder">Founder</a><a href="#faq">FAQ</a>
   <a class="btn p sm" href="https://discord.gg/6Hm5FuE8us" target="_blank" rel="noopener noreferrer">Join Discord</a>
  </div>
 </nav></div></header>
@@ -190,6 +213,37 @@ dialog p{color:var(--mut);font-size:.93rem;margin-bottom:12px}
  <div class="grid">
   <article class="card free reveal"><div class="ic">🎁</div><h4>Free Level-Ups</h4><p>Join the Discord and DM us. Free service has lower priority — be patient.</p><button class="pill" data-more="Free Level-Ups">REQUEST FREE →</button></article>
   <article class="card reveal"><div class="ic">🚀</div><h4>Priority (Paid)</h4><p>Want more effort and speed? Paid grinding gets priority treatment.</p><button class="pill" data-more="Priority Grinding">GET A QUOTE →</button></article>
+ </div>
+</div></section>
+
+<section id="pricing"><div class="wrap">
+ <div class="sh reveal"><small>PRICING</small><h3>Launch prices</h3><p>Starting prices in USD. Final price depends on complexity and is confirmed in your ticket before you pay.</p></div>
+ <div class="plist">
+  <article class="price reveal"><span class="rec">RECOMMENDED</span><h4>Discord Helper</h4><div class="rng">$5–$30</div><div class="sub">Depending on complexity</div>
+   <table><tr><td>Basic server setup</td><td>$5</td></tr><tr><td>Roles and permissions</td><td>$5</td></tr><tr><td>Channel organization</td><td>$5</td></tr><tr><td>Bot configuration</td><td>$10</td></tr><tr><td>Complete server setup</td><td>$25</td></tr><tr><td>Advanced server setup</td><td>$30</td></tr></table>
+   <a class="btn p" href="https://discord.gg/6Hm5FuE8us" target="_blank" rel="noopener noreferrer">Order via ticket</a></article>
+  <article class="price reveal"><span class="rec">RECOMMENDED</span><h4>AI-Built Websites</h4><div class="rng">$15–$100</div><div class="sub">Depending on pages and features</div>
+   <table><tr><td>Simple one-page website</td><td>$15</td></tr><tr><td>Basic website</td><td>$25</td></tr><tr><td>Professional website</td><td>$50</td></tr><tr><td>Advanced multi-page website</td><td>$75</td></tr><tr><td>Premium custom website</td><td>$100</td></tr><tr><td>Small website edits</td><td>$5–$10</td></tr></table>
+   <a class="btn p" href="https://discord.gg/6Hm5FuE8us" target="_blank" rel="noopener noreferrer">Order via ticket</a></article>
+  <article class="price reveal"><h4>Gaming Help</h4><div class="rng">$5–$10</div><div class="sub">For coaching and gameplay guidance only</div>
+   <table><tr><td>30-minute gameplay coaching</td><td>$5</td></tr><tr><td>1-hour gameplay coaching</td><td>$10</td></tr><tr><td>Gameplay tips and guides</td><td>Free</td></tr></table>
+   <a class="btn p" href="https://discord.gg/6Hm5FuE8us" target="_blank" rel="noopener noreferrer">Order via ticket</a></article>
+ </div>
+ <div class="pay reveal">
+  <h4>ACCEPTED PAYMENT METHODS</h4>
+  <div class="pm">
+   <span><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCI+PHJlY3Qgd2lkdGg9IjY0IiBoZWlnaHQ9IjY0IiByeD0iMTQiIGZpbGw9IiMwMGQ2NGYiLz48dGV4dCB4PSIzMiIgeT0iNDciIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJBcmlhbCxIZWx2ZXRpY2Esc2Fucy1zZXJpZiIgZm9udC13ZWlnaHQ9IjkwMCIgZm9udC1zaXplPSI0NiIgZmlsbD0iI2ZmZiI+JDwvdGV4dD48L3N2Zz4=" alt="" loading="lazy">Cash App</span>
+   <span><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCI+PHRleHQgeD0iMjYiIHk9IjUyIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwsSGVsdmV0aWNhLHNhbnMtc2VyaWYiIGZvbnQtd2VpZ2h0PSI5MDAiIGZvbnQtc3R5bGU9Iml0YWxpYyIgZm9udC1zaXplPSI1NiIgZmlsbD0iIzAwOWNkZSI+UDwvdGV4dD48dGV4dCB4PSIyMiIgeT0iNDgiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJBcmlhbCxIZWx2ZXRpY2Esc2Fucy1zZXJpZiIgZm9udC13ZWlnaHQ9IjkwMCIgZm9udC1zdHlsZT0iaXRhbGljIiBmb250LXNpemU9IjU2IiBmaWxsPSIjMDAzMDg3Ij5QPC90ZXh0Pjwvc3ZnPg==" alt="" loading="lazy">PayPal</span>
+   <span><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCI+PHBvbHlnb24gcG9pbnRzPSIzMiwzIDU3LDE3LjUgNTcsNDYuNSAzMiw2MSA3LDQ2LjUgNywxNy41IiBmaWxsPSIjZjQ3ZmZmIi8+PHBvbHlnb24gcG9pbnRzPSIzMiwxNyA0NSwyNSA0NSw0MCAzMiw0OCAxOSw0MCAxOSwyNSIgZmlsbD0iI2ZmZiIgb3BhY2l0eT0iLjk1Ii8+PHBvbHlnb24gcG9pbnRzPSIzMiwxNyA0NSwyNSAzMiwzMyAxOSwyNSIgZmlsbD0iI2ZmZDZmZiIvPjwvc3ZnPg==" alt="" loading="lazy">Server boosting</span>
+   <span><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCI+PHBvbHlnb24gcG9pbnRzPSIzMiw2IDU0LDE5IDU0LDQ1IDMyLDU4IDEwLDQ1IDEwLDE5IiBmaWxsPSJub25lIiBzdHJva2U9IiNiOWI0OWMiIHN0cm9rZS13aWR0aD0iNyIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPjxwb2x5Z29uIHBvaW50cz0iMzIsMjQgNDIsMzAgNDIsNDAgMzIsNDYgMjIsNDAgMjIsMzAiIGZpbGw9IiNiOWI0OWMiLz48L3N2Zz4=" alt="" loading="lazy">Robux</span>
+   <a href="https://discord.gg/6Hm5FuE8us" target="_blank" rel="noopener noreferrer"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCI+PHBhdGggZD0iTTEwIDEybDIwIDIwLTIwIDIwIiBmaWxsPSJub25lIiBzdHJva2U9IiNmZmQ4NGQiIHN0cm9rZS13aWR0aD0iOSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+PHBhdGggZD0iTTM0IDEybDIwIDIwLTIwIDIwIiBmaWxsPSJub25lIiBzdHJva2U9IiNmZmQ4NGQiIHN0cm9rZS13aWR0aD0iOSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+PC9zdmc+" alt="" loading="lazy">More details</a>
+  </div>
+ </div>
+ <div class="pol reveal">
+  <div><b>What's included</b>Each package's exact scope is listed in your ticket before you pay.</div>
+  <div><b>Delivery time</b>Estimated delivery is confirmed in your ticket.</div>
+  <div><b>Revisions and refunds</b>Revision and refund terms are agreed in your ticket before payment.</div>
+  <div><b>Honest results</b>No guaranteed results, and no fake reviews or order counts.</div>
  </div>
 </div></section>
 
@@ -244,6 +298,7 @@ dialog p{color:var(--mut);font-size:.93rem;margin-bottom:12px}
  <div class="sh reveal"><small>FAQ</small><h3>Quick answers</h3></div>
  <div class="reveal" style="max-width:780px">
   <details><summary>How do I order or buy?</summary><p>Join the Discord, go to the purchase channel and press Create Ticket. Tell us what you want and we'll send availability and pricing.</p></details>
+  <details><summary>What payment methods do you accept?</summary><p>Cash App, PayPal, Discord server boosting and Robux. Ask in your ticket for more details.</p></details>
   <details><summary>How much does it cost?</summary><p>It depends on the service and stock, so prices are shared in your ticket. Free level-ups are available too.</p></details>
   <details><summary>Is the free level-up really free?</summary><p>Yes for community members, with lower priority. Paid options are faster.</p></details>
   <details><summary>Where do I get more info or support?</summary><p>Everything goes through our Discord server, or email eilitesclan@gmail.com.</p></details>
